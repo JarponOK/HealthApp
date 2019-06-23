@@ -181,12 +181,12 @@ const styles = StyleSheet.create({
     flex: 0,
     flexDirection: 'row',
     marginLeft: -15,
-    marginTop: -180,
-    borderRadius: 20,
-    marginBottom: 20,
+    marginTop: -300,
+    marginBottom: 200,
   },
   textInc: {
     fontSize: 20,
     marginTop: 5,
   },
 });
+
