@@ -33,21 +33,21 @@ export default class App extends Component<Props> {
   }
 
   flagVaccine() {
-    this.isFlagA = false;
-    this.isFlagC = false;
-    this.isFlagV = true;
+    this.setState({ isFlagA: false });
+    this.setState({ isFlagC: false });
+    this.setState({ isFlagV: true });
   }
 
   flagAlergic() {
-    this.isFlagA = true;
-    this.isFlagC = false;
-    this.isFlagV = false;
+    this.setState({ isFlagA: true });
+    this.setState({ isFlagC: false });
+    this.setState({ isFlagV: false });
   }
 
   flagChronic() {
-    this.isFlagA = false;
-    this.isFlagC = true;
-    this.isFlagV = false;
+    this.setState({ isFlagA: false });
+    this.setState({ isFlagC: true });
+    this.setState({ isFlagV: false });
   }
 
   async getAll(snils) {
@@ -110,13 +110,13 @@ export default class App extends Component<Props> {
 
             <View style={styles.buttonFirst}>
               <View style={styles.buttonInc}>
-                <Button title='Прививки   ' color='#FFF' onPress={this.flagVaccine()}/>
+                <Button title='Прививки   ' color='#FFF' onPress={() => this.flagVaccine()} />
               </View>
               <View style={styles.buttonInc}>
-                <Button title='Алергии   ' color='#FFF' onPress={this.flagAlergic()}/>
+                <Button title='Алергии   ' color='#FFF' onPress={() => this.flagAlergic()} />
               </View>
               <View style={styles.buttonInc}>
-                <Button title='Хронические  ' color='#FFF' onPress={this.flagChronic()}/>
+                <Button title='Хронические  ' color='#FFF' onPress={() => this.flagChronic()} />
               </View>
             </View>
 
